@@ -1,0 +1,16 @@
+@use './settings' as *;
+
+%btn-common {
+  font-size: 10px;
+}
+
+@mixin button-generate-styles {
+  @each $name, $value in $btn-settings {
+    $selector-button: button-#{$name};
+
+    %#{$selector-button} {
+      @extend %btn-common !optional;
+      color: $value
+    }
+  }
+}

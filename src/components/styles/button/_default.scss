@@ -1,0 +1,11 @@
+@use './mixins' as *;
+
+@include button-generate-styles;
+
+.btn {
+  @extend %button-primary;
+}
+
+.btn-secondary {
+  @extend %button-secondary;
+}

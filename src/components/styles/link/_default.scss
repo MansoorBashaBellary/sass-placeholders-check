@@ -1,0 +1,5 @@
+@use './../button/default' as *;
+
+.link {
+  @extend %button-primary;
+}
